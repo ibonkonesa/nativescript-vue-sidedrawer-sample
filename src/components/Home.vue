@@ -19,7 +19,11 @@
 <script>
 
     export default {
-        name: 'home'
+        name: 'home',
+        created(){
+
+            this.$router.push('/hello');
+        }
     }
 
 </script>

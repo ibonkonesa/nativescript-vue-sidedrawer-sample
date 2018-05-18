@@ -1,6 +1,8 @@
-# Drawer Example
+# Nativescript Vue SideDrawer Example
 
-> Drawer Example
+Working example with vue-routing, vuex and nativescript-ui-sidedrawer.
+
+In Home.vue file there is a hack that allows sidedrawer to be shown over main action bar placed into sidedrawer content  
 
 ## Usage
 
