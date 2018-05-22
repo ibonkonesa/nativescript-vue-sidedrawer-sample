@@ -1,11 +1,7 @@
 <template>
     <Page>
         <ActionBar height="0"></ActionBar>
-        <StackLayout>
-
-            <router-view></router-view>
-
-        </StackLayout>
+        <router-view></router-view>
     </Page>
 </template>
 

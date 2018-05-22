@@ -1,6 +1,5 @@
 <template>
     <StackLayout>
-        <ActionBar height="0"></ActionBar> <!--THIS ACTION BAR DOES THE HACK! -->
         <RadSideDrawer ref="drawer" showOverNavigation="true">
             <StackLayout ~drawerContent>
                 <Button text="Hello" @tap="$router.push('/hello'); $refs.drawer.nativeView.closeDrawer() "/>
