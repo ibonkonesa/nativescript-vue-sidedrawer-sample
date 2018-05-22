@@ -1,15 +1,25 @@
 import Vue from 'nativescript-vue';
 import VueRouter from 'vue-router';
+import * as applicationSettings from 'tns-core-modules/application-settings'
 
 Vue.use(VueRouter);
 
 import HelloWorld from '../components/HelloWorld';
 import Counter from '../components/Counter';
-
+import Login from '../components/Login';
 import Home from '../components/Home';
 
 const router = new VueRouter({
     routes: [
+
+        {
+            path: '/login',
+            component: Login,
+            meta: {
+                title: 'Login',
+            },
+        },
+
 
         {
             path: '/home',
@@ -39,6 +49,6 @@ const router = new VueRouter({
     ],
 });
 
-
-router.push('/home');
+if (applicationSettings.hasKey('isLogged') && applicationSettings.getBoolean('isLogged')) router.replace('/home');
+else router.replace('/login');
 module.exports = router;
