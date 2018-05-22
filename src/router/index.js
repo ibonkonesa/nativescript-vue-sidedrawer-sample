@@ -6,24 +6,39 @@ Vue.use(VueRouter);
 import HelloWorld from '../components/HelloWorld';
 import Counter from '../components/Counter';
 
+import Home from '../components/Home';
+
 const router = new VueRouter({
     routes: [
+
         {
-            path: '/hello',
-            component: HelloWorld,
-            meta: {
-                title: 'Hello World',
-            },
+            path: '/home',
+            component: Home,
+
+            children: [
+                {
+                    path: '/hello',
+                    component: HelloWorld,
+                    meta: {
+                        title: 'Hello World',
+                    },
+                },
+                {
+                    path: '/counter',
+                    component: Counter,
+                    meta: {
+                        title: 'Counter',
+                    },
+                },
+
+            ]
         },
-        {
-            path: '/counter',
-            component: Counter,
-            meta: {
-                title: 'Counter',
-            },
-        },
-        {path: '*', redirect: '/hello'},
+
+
+
     ],
 });
 
+
+router.push('/home');
 module.exports = router;

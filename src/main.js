@@ -1,19 +1,17 @@
 import Vue from 'nativescript-vue';
 import router from './router';
 import store from './store';
+import App from './App';
 
 import './styles.scss';
-
-import Home from './components/Home';
 
 Vue.registerElement('RadSideDrawer', () => require('nativescript-ui-sidedrawer').RadSideDrawer);
 
 new Vue({
-
     router,
     store,
-    template: '<Home/>',
-    components: {Home},
+    template: '<App/>',
+    components: { App }
 
 }).$start();
 

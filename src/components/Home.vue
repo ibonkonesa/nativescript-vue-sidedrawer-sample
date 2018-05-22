@@ -1,5 +1,5 @@
 <template>
-    <Page>
+    <StackLayout>
         <ActionBar height="0"></ActionBar> <!--THIS ACTION BAR DOES THE HACK! -->
         <RadSideDrawer ref="drawer" showOverNavigation="true">
             <StackLayout ~drawerContent>
@@ -13,14 +13,15 @@
                 <router-view></router-view>
             </StackLayout>
         </RadSideDrawer>
-    </Page>
+
+    </StackLayout>
 </template>
 
 <script>
 
     export default {
         name: 'home',
-        created(){
+        created() {
 
             this.$router.push('/hello');
         }
