@@ -1,6 +1,6 @@
 <template>
-    <StackLayout>
-        <RadSideDrawer ref="drawer" showOverNavigation="true">
+    <StackLayout >
+        <RadSideDrawer ref="drawer" showOverNavigation="true" style="height:100%">
             <StackLayout ~drawerContent>
                 <Button text="Hello" @tap="$router.push('/hello'); $refs.drawer.nativeView.closeDrawer() "/>
                 <Button text="Counter" @tap="$router.push('/counter'); $refs.drawer.nativeView.closeDrawer()"/>
@@ -27,3 +27,4 @@
     }
 
 </script>
+
